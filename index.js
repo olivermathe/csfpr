@@ -19,7 +19,7 @@ class Csfpr {
 
         this.autenticacao = new Autenticacao(opts);
 
-        this.tokenEletronico = new TokenEletronico(opts);
+        this.tokenEletronico = new TokenEletronico({ ...opts, autenticacao: this.autenticacao });
 
     }
 
