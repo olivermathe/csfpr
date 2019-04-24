@@ -1,6 +1,7 @@
-import Autenticacao from './src/autenticacao';
+const Autenticacao = require('./src/autenticacao');
+const TokenEletronico = require('./src/tokenEletronico');
 
-export default class Csfpr {
+class Csfpr {
 
     /**
      * @param {Object} opts
@@ -11,11 +12,17 @@ export default class Csfpr {
      * @param {number} opts.codigoHierarquia
      * @param {string} opts.canalSolicitacao
      * @param {number} opts.chaveSolicitacao
+     * @param {string} opts.codigoTransacaoNegocio
+     * @returns {Csfpr}
      */
     constructor(opts) {
 
         this.autenticacao = new Autenticacao(opts);
 
+        this.tokenEletronico = new TokenEletronico(opts);
+
     }
 
 }
+
+module.exports = Csfpr;
