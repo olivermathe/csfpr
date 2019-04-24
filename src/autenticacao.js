@@ -1,8 +1,8 @@
-import Soap from 'soap';
+const Soap = require('soap');
 
-import Conf from './conf';
+const Conf = require('./conf');
 
-export default class Autenticacao {
+class Autenticacao {
 
     /**
      * @param {Object} opts
@@ -84,3 +84,5 @@ export default class Autenticacao {
     }
 
 }
+
+module.exports = Autenticacao;

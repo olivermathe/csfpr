@@ -1,6 +1,6 @@
-import Autenticacao from './src/autenticacao';
+const Autenticacao = require('./src/autenticacao');
 
-export default class Csfpr {
+class Csfpr {
 
     /**
      * @param {Object} opts
@@ -19,3 +19,5 @@ export default class Csfpr {
     }
 
 }
+
+module.exports = Csfpr;

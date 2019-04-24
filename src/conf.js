@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     envelopeKey: 'soapenv',
     namespaceArrayElements: false,
     attributesKey: '$attributes',
