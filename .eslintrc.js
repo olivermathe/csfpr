@@ -13,5 +13,9 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    indent: ['error', 4],
+    'padded-blocks': 'off',
+    'nonblock-statement-body-position': ['error', 'below'],
+    'curly': 'off',
   },
 };
