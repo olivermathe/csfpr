@@ -1,6 +1,6 @@
 {
   "name": "csfpr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "CSF Portal Relacionamento",
   "main": "index.js",
   "scripts": {
