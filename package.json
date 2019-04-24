@@ -1,0 +1,25 @@
+{
+  "name": "csfpr",
+  "version": "1.0.0",
+  "description": "CSF Portal Relacionamento",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivermathe/csfpr.git"
+  },
+  "author": "Matheus Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olivermathe/csfpr/issues"
+  },
+  "homepage": "https://github.com/olivermathe/csfpr#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "mocha": "^6.1.4"
+  }
+}
