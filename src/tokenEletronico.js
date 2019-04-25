@@ -11,7 +11,7 @@ class TokenEletronico {
      * @param {Object} opts
      * @param {Autenticacao} opts.autenticacao
      * @param {string} opts.host
-     * @param {string} opts.path
+     * @param {string} [opts.path]
      * @param {number} opts.codigoHierarquia
      * @param {string} opts.canalSolicitacao
      * @param {number} opts.chaveSolicitacao

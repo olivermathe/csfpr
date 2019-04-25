@@ -7,7 +7,7 @@ class Autenticacao {
     /**
      * @param {Object} opts
      * @param {string} opts.host
-     * @param {string} opts.path
+     * @param {string} [opts.path]
      * @param {string} opts.senha
      * @param {string} opts.usuario
      * @param {number} opts.codigoHierarquia
