@@ -7,6 +7,7 @@ CSF Portal Relacionamento
 
 - [Instalação](#instalação)
 - [Introdução](#introdução)
+- [Serviços](#serviços)
 
 ## Instalação
 
@@ -45,4 +46,7 @@ csfpr.tokenEletronico.obterSmsToken('03872962023', 982154887, 51, 55)
 
 ```
 
-Neste exemplo um cliente SOAP é iniciado com algumas configurações especificas (linha 32), após é chamado o metodo **obterSmsToken()** do serviço **token eletronico** onde sera enviado um sms para o número **(51)98215-4887**.
+Neste exemplo um cliente SOAP é iniciado com algumas configurações especificas, após é chamado o metodo **obterSmsToken()** do serviço **tokenEletronico** onde sera enviado um sms para o número **(51)98215-4887**.
+
+## Serviços
+Veja a [documentação](DOC.md) dos serviços disponiveis.
