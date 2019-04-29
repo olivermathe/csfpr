@@ -1,5 +1,5 @@
 # csfpr
-CSF Portal Relacionamento
+CSF Plataforma de Relacionamento
 
 [![NPM Version](https://img.shields.io/npm/v/csfpr.svg?color=blue)](https://www.npmjs.com/package/csfpr)
 
@@ -23,7 +23,7 @@ $ npm install csfpr
 
 ## Introdução
 
-Este projeto tem como objetivo facilitar a utilização dos serviços disponibilizados pelo CSF através do portal de relacionamento, centralizando os métodos dos serviços SOAP em um só modulo Node.js.
+Este projeto tem como objetivo facilitar a utilização dos serviços disponibilizados pelo CSF através do Plataforma de de relacionamento, centralizando os métodos dos serviços SOAP em um só modulo Node.js.
 
 Exemplo de utilização:
 

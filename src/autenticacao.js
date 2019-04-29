@@ -2,19 +2,21 @@ const Soap = require('soap');
 
 const Conf = require('./conf');
 
+/**
+ * Este serviço é responsável por organizar os métodos referentes à autenticação dos usuários
+ * consumidores de informação da Plataforma de Relacionamento.
+ * @class
+ * @param {Object} opts
+ * @param {string} opts.host
+ * @param {string} [opts.path]
+ * @param {string} opts.senha
+ * @param {string} opts.usuario
+ * @param {number} opts.codigoHierarquia
+ * @param {string} opts.canalSolicitacao
+ * @param {number} opts.chaveSolicitacao
+ */
 class Autenticacao {
 
-    /**
-     * @param {Object} opts
-     * @param {string} opts.host
-     * @param {string} [opts.path]
-     * @param {string} opts.senha
-     * @param {string} opts.usuario
-     * @param {number} opts.codigoHierarquia
-     * @param {string} opts.canalSolicitacao
-     * @param {number} opts.chaveSolicitacao
-     * @returns {Autenticacao}
-     */
     constructor(opts) {
 
         this.host = opts.host;
@@ -44,6 +46,10 @@ class Autenticacao {
     }
 
     /**
+     * Método responsável pela criação de um token de acesso, que servirá para o consumo de todas as informações
+     * disponibilizadas pela Plataforma de Relacionamento ao usuário de integração de serviço, quando devidamente
+     * identificado através das credenciais de acesso informadas.
+     * @method
      * @param {string} senha
      * @param {string} usuario
      * @returns {object}
@@ -68,9 +74,6 @@ class Autenticacao {
 
     }
 
-    /**
-     * @returns {string}
-     */
     async getTokenPlataformaRelacionamento() {
 
         if (!this.tokenPlataformaRelacionamento) {

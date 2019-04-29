@@ -1,10 +1,11 @@
 {
   "name": "csfpr",
   "version": "0.1.1-3",
-  "description": "CSF Portal Relacionamento",
+  "description": "CSF Plataforma de Relacionamento",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test"
+    "test": "mocha ./test",
+    "doc": "rm -rf DOC.md && documentation build ./src/* -f md > DOC.md"
   },
   "repository": {
     "type": "git",

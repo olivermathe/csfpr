@@ -5,19 +5,21 @@ const Conf = require('./conf');
 // eslint-disable-next-line no-unused-vars
 const Autenticacao = require('./autenticacao');
 
+/**
+ * Este serviço é responsável por obter e validar o Token Eletrônico do cliente 
+ * solicitante de determinadas funcionalidades. Endereço para acesso ao serviço
+ * @class
+ * @param {Object} opts
+ * @param {Autenticacao} opts.autenticacao - Class responsavel por autenticar 
+ * @param {string} opts.host
+ * @param {string} [opts.path]
+ * @param {number} opts.codigoHierarquia
+ * @param {string} opts.canalSolicitacao
+ * @param {number} opts.chaveSolicitacao
+ * @param {string} opts.codigoTransacaoNegocio
+ */
 class TokenEletronico {
 
-    /**
-     * @param {Object} opts
-     * @param {Autenticacao} opts.autenticacao
-     * @param {string} opts.host
-     * @param {string} [opts.path]
-     * @param {number} opts.codigoHierarquia
-     * @param {string} opts.canalSolicitacao
-     * @param {number} opts.chaveSolicitacao
-     * @param {string} opts.codigoTransacaoNegocio
-     * @returns {TokenEletronico}
-     */
     constructor(opts) {
 
         this.autenticacao = opts.autenticacao;
@@ -60,6 +62,9 @@ class TokenEletronico {
     }
 
     /**
+     * Método responsável por realizar a criação de um token eletrônico de segurança e, opcionalmente, 
+     * realizar a tentativa de entrega ao cliente final, conforme os parâmetros passados.
+     * @method
      * @param {string} cpf
      * @param {number} numero
      * @param {number} ddd

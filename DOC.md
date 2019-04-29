@@ -6,73 +6,83 @@
     -   [Parameters][2]
     -   [autenticarConsumidor][3]
         -   [Parameters][4]
-    -   [getTokenPlataformaRelacionamento][5]
--   [constructor][6]
-    -   [Parameters][7]
--   [obterSmsToken][8]
-    -   [Parameters][9]
--   [obterEmailToken][10]
-    -   [Parameters][11]
+-   [TokenEletronico][5]
+    -   [Parameters][6]
+    -   [obterSmsToken][7]
+        -   [Parameters][8]
+    -   [obterEmailToken][9]
+        -   [Parameters][10]
 
 ## Autenticacao
 
-Serviço responsavel por disponibilizar metodos de autenticação e validação
-de credenciais do portal.
+Este serviço é responsável por organizar os métodos referentes à autenticação dos usuários
+consumidores de informação da Plataforma de Relacionamento.
 
 ### Parameters
 
--   `opts` **[Object][12]** 
+-   `opts` **[Object][11]** 
+    -   `opts.host` **[string][12]** 
+    -   `opts.path` **[string][12]?** 
+    -   `opts.senha` **[string][12]** 
+    -   `opts.usuario` **[string][12]** 
+    -   `opts.codigoHierarquia` **[number][13]** 
+    -   `opts.canalSolicitacao` **[string][12]** 
+    -   `opts.chaveSolicitacao` **[number][13]** 
 
 ### autenticarConsumidor
 
+Método responsável pela criação de um token de acesso, que servirá para o consumo de todas as informações
+disponibilizadas pela Plataforma de Relacionamento ao usuário de integração de serviço, quando devidamente
+identificado através das credenciais de acesso informadas.
+
 #### Parameters
 
--   `senha` **[string][13]** 
--   `usuario` **[string][13]** 
+-   `senha` **[string][12]** 
+-   `usuario` **[string][12]** 
 
-Returns **[object][12]** 
+Returns **[object][11]** 
 
-### getTokenPlataformaRelacionamento
+## TokenEletronico
 
-Returns **[string][13]** 
-
-## constructor
-
-### Parameters
-
--   `opts` **[Object][12]** 
-    -   `opts.autenticacao` **[Autenticacao][14]** 
-    -   `opts.host` **[string][13]** 
-    -   `opts.path` **[string][13]?** 
-    -   `opts.codigoHierarquia` **[number][15]** 
-    -   `opts.canalSolicitacao` **[string][13]** 
-    -   `opts.chaveSolicitacao` **[number][15]** 
-    -   `opts.codigoTransacaoNegocio` **[string][13]** 
-
-Returns **TokenEletronico** 
-
-## obterSmsToken
+Este serviço é responsável por obter e validar o Token Eletrônico do cliente 
+solicitante de determinadas funcionalidades. Endereço para acesso ao serviço
 
 ### Parameters
 
--   `cpf` **[string][13]** 
--   `numero` **[number][15]** 
--   `ddd` **[number][15]** 
--   `ddi` **[number][15]** 
+-   `opts` **[Object][11]** 
+    -   `opts.autenticacao` **[Autenticacao][14]** Class responsavel por autenticar
+    -   `opts.host` **[string][12]** 
+    -   `opts.path` **[string][12]?** 
+    -   `opts.codigoHierarquia` **[number][13]** 
+    -   `opts.canalSolicitacao` **[string][12]** 
+    -   `opts.chaveSolicitacao` **[number][13]** 
+    -   `opts.codigoTransacaoNegocio` **[string][12]** 
 
-Returns **[object][12]** 
+### obterSmsToken
 
-## obterEmailToken
+Método responsável por realizar a criação de um token eletrônico de segurança e, opcionalmente, 
+realizar a tentativa de entrega ao cliente final, conforme os parâmetros passados.
 
-### Parameters
+#### Parameters
 
--   `cpf` **[string][13]** 
+-   `cpf` **[string][12]** 
+-   `numero` **[number][13]** 
+-   `ddd` **[number][13]** 
+-   `ddi` **[number][13]** 
+
+Returns **[object][11]** 
+
+### obterEmailToken
+
+#### Parameters
+
+-   `cpf` **[string][12]** 
 -   `email`  
--   `numero` **[number][15]** 
--   `ddd` **[number][15]** 
--   `ddi` **[number][15]** 
+-   `numero` **[number][13]** 
+-   `ddd` **[number][13]** 
+-   `ddi` **[number][13]** 
 
-Returns **[object][12]** 
+Returns **[object][11]** 
 
 [1]: #autenticacao
 
@@ -82,24 +92,22 @@ Returns **[object][12]**
 
 [4]: #parameters-1
 
-[5]: #gettokenplataformarelacionamento
+[5]: #tokeneletronico
 
-[6]: #constructor
+[6]: #parameters-2
 
-[7]: #parameters-2
+[7]: #obtersmstoken
 
-[8]: #obtersmstoken
+[8]: #parameters-3
 
-[9]: #parameters-3
+[9]: #obteremailtoken
 
-[10]: #obteremailtoken
+[10]: #parameters-4
 
-[11]: #parameters-4
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
 [14]: #autenticacao
-
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
